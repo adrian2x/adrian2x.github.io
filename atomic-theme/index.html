@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Atomic Theme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="stylesheet" href="https://unpkg.com/@atomic-stack/theme" crossorigin="anonymous" />
+  </head>
+  <body class="container">
+    <nav class="nav">
+      <div class="nav-start">
+        <a class="active">Link 1</a>
+        <a>Link 2</a>
+      </div>
+      <div class="nav-center">
+        <a class="brand">
+          <img src="https://www.svgrepo.com/show/303157/react-logo.svg" alt="" />
+        </a>
+      </div>
+      <div class="nav-end">
+        <a>Link 3</a>
+        <a>Link 4</a>
+      </div>
+    </nav>
+
+    <h1>Atomic CSS theme</h1>
+    <p>
+      Just include this theme on any website and go from outdated to fresh and modern looking page,
+      instantly.
+    </p>
+    <p>Designed for customization and extensibility.</p>
+    <p>Supports dark mode.</p>
+
+    <h2>Why you should use it</h2>
+    <ul>
+      <li>
+        Just drop in, even on existing HTML content, to get a pretty looking website (everything
+        "just works")
+      </li>
+      <li>
+        Quick prototyping, especially when working on backend sites and can't yet be bothered to
+        fidget with css/html
+      </li>
+      <li>No need to remember tons of different class names for every other css framework</li>
+      <li>No previous CSS or design experience required.</li>
+    </ul>
+
+    <h3>Installation</h3>
+    <h4>CDN:</h4>
+    <ol>
+      <li>
+        <p>Simply add this to your <code>&lt;head&gt;</code> tag.</p>
+        <pre>
+&lt;link rel="stylesheet" href="https://unpkg.com/@atomic-stack/theme" type="text/css"&gt;</pre
+        >
+      </li>
+    </ol>
+
+    <h4>Manually:</h4>
+    <ol>
+      <li>
+        <p>
+          Download the file directly from
+          <a href="https://unpkg.com/@atomic-stack/theme" download>here.</a>
+        </p>
+      </li>
+      <li>
+        <p>Link the downloaded file on your html <code>&lt;head&gt;</code></p>
+        <pre>&lt;link rel="stylesheet" href="styles.css" type="text/css"&gt;</pre>
+      </li>
+    </ol>
+
+    <h3 id="Typography">
+      <a href="#Typography">Typography</a>
+    </h3>
+    <h1>This is a heading</h1>
+    <h2>This is a heading</h2>
+    <h3>This is a heading</h3>
+    <h4>This is a heading</h4>
+    <h5>This is a heading</h5>
+    <h6>This is a heading</h6>
+
+    <h3 id="Backgrounds">
+      <a href="#Backgrounds">Backgrounds</a>
+    </h3>
+    <div class="flex">
+      <div
+        class="m4 bg-contain bg-center w-50 h-6 shadow-4"
+        style="
+          background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&h=640&q=80);
+        "></div>
+      <div
+        class="m4 bg-cover bg-center w-50 h-6"
+        style="
+          background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&h=640&q=80);
+        "></div>
+    </div>
+
+    <h3 id="Grid">
+      <a href="#Grid">Grid layout</a>
+    </h3>
+    <div class="grid grid-cols-3 gap-4">
+      <div
+        class="m4 bg-cover bg-center h-6 drop-shadow-2"
+        style="
+          background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&h=640&q=80);
+        ">
+        <div class="w-100 h-100 overlay-top"></div>
+      </div>
+      <div
+        class="m4 bg-cover bg-center h-6 drop-shadow-2"
+        style="
+          background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&h=640&q=80);
+        ">
+        <div class="w-100 h-100 overlay-bottom"></div>
+      </div>
+      <div
+        class="m4 bg-cover bg-center h-6 drop-shadow-2"
+        style="
+          background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&h=640&q=80);
+        ">
+        <div class="w-100 h-100 overlay-semi backdrop-blur"></div>
+      </div>
+    </div>
+
+    <section id="form">
+      <h3 id="forms">
+        <a href="#forms">Forms</a>
+      </h3>
+
+      <form>
+        <fieldset>
+          <legend>Input fields</legend>
+
+          <p class="grouped">
+            <input type="text" placeholder="Username" required />
+            <input type="password" placeholder="Password" required />
+            <button class="button primary">Submit</button>
+          </p>
+
+          <p class="grouped">
+            <label> <input type="checkbox" /> Checkbox 1</label>
+            <label> <input type="checkbox" /> Checkbox 2</label>
+            <label> <input type="checkbox" /> Checkbox 3</label>
+            <label> <input type="checkbox" disabled /> Disabled</label>
+          </p>
+
+          <hr />
+
+          <label>
+            Disabled
+            <input type="text" disabled placeholder="Disabled" />
+          </label>
+
+          <p class="grouped">
+            <label><input type="radio" name="group" /> Option A</label>
+            <label><input type="radio" name="group" /> Option B</label>
+            <label><input type="radio" name="group" /> Option C</label>
+          </p>
+
+          <label>
+            File picker
+            <input type="file" placeholder="Browse" />
+          </label>
+
+          <p>
+            <input type="submit" placeholder="Submit" />
+            <input type="reset" placeholder="Reset" />
+          </p>
+        </fieldset>
+      </form>
+
+      <fieldset>
+        <legend>HTML5 inputs</legend>
+
+        <p>
+          <label> <input type="color" /> Color </label>
+        </p>
+
+        <label>
+          Email
+          <div class="hint">This is a form hint</div>
+          <input type="email" placeholder="your@email.com" />
+        </label>
+
+        <label>
+          Search
+          <input type="search" placeholder="Search" />
+        </label>
+
+        <label>
+          Phone
+          <input type="tel" placeholder="888-888-8888" />
+        </label>
+
+        <label>
+          URL
+          <input type="url" placeholder="URL" />
+        </label>
+
+        <label>
+          Number
+          <input type="number" placeholder="Enter a number" min="0" max="100" step="10" />
+        </label>
+
+        <label for="price">
+          Range
+          <input name="price" type="range" min="50000" max="500000" step="100" />
+          <!-- <output for="price">value</output> -->
+        </label>
+
+        <label>
+          Date
+          <input type="date" placeholder="Date" min="2013-06-01" max="2013-08-31" step="7" />
+        </label>
+
+        <label>
+          Datetime-local input
+          <input type="datetime-local" placeholder="Datetime local" />
+        </label>
+
+        <label>
+          Time
+          <input type="time" />
+        </label>
+      </fieldset>
+    </section>
+
+    <h3 id="select">
+      <a href="#select">Selects</a>
+    </h3>
+    <label>
+      Cars
+      <select name="Cars" id="cars">
+        <optgroup label="SUV">
+          <option value="">Porsche Cayenne</option>
+          <option value="">Lincoln Nautilus</option>
+          <option value="">Mercedes-Benz GLB 2022</option>
+          <option value="">BMW X3 2022</option>
+          <option value="">Genesis GV80 2022</option>
+          <option value="">Mercedes-Benz GLS 2022</option>
+        </optgroup>
+        <optgroup label="Sports Car">
+          <option value="">Ford Mustang</option>
+          <option value="">Toyota GR Supra</option>
+          <option value="">McLaren 7205</option>
+          <option value="">Porsche 911</option>
+          <option value="">Audi R8 V10</option>
+          <option value="">Chevrolet Corvette Z06</option>
+        </optgroup>
+      </select></label
+    >
+
+    <h3>Datalist</h3>
+    <label for="browser"
+      >Choose your browser
+      <div class="hint">Type to search</div>
+      <datalist id="browsersList">
+        <label for="fallback">Or pick a browser</label>
+        <select name="browser" id="fallback">
+          <option value="Edge"></option>
+          <option value="Firefox"></option>
+          <option value="Chrome"></option>
+          <option value="Opera"></option>
+          <option value="Safari"></option>
+        </select>
+      </datalist>
+      <input type="text" id="browser" list="browsersList" />
+    </label>
+
+    <section>
+      <h3 id="buttons">
+        <a href="#buttons">Buttons</a>
+      </h3>
+      <p>
+        <button>Default</button>
+        <button class="primary">Primary</button>
+        <button class="secondary">Secondary</button>
+        <button class="dark">Dark</button>
+        <button class="outline">Outline</button>
+        <button class="outline primary">Primary</button>
+        <button class="clear">Clear</button>
+      </p>
+      <p>
+        <button>
+          <span class="icon">❯</span>
+          Button icon
+        </button>
+      </p>
+    </section>
+
+    <section>
+      <h3 id="typography">
+        <a href="#typography">Typography</a>
+      </h3>
+
+      <blockquote>This is a blockquote</blockquote>
+      <q>This is a quoted text with the <code>&lt;q&gt;</code> tag. </q>
+      <p>
+        <cite> This is a quoted text with the <code>&lt;cite&gt;</code> tag. </cite>
+      </p>
+      <p>
+        <samp
+          ><span>jdoe@mowmow:~$</span> <kbd>ssh demo.example.com</kbd><br />
+          Last login: Tue Apr 12 09:10:17 2005 from mowmow.example.com<br />
+          <span class="prompt">jdoe@demo:~$</span> _</samp
+        >
+      </p>
+
+      <p>These are some abbreviations:</p>
+      <dl>
+        <dt><abbr title="laugh out loud">lol</abbr></dt>
+        <dd>Laugh out loud</dd>
+        <dt><abbr title="I don't know">idk</abbr></dt>
+        <dd>I don't know</dd>
+        <dt><abbr title="got to go">g2g</abbr></dt>
+        <dd>got to go</dd>
+        <dt><abbr title="talk to you later">ttyl</abbr></dt>
+        <dd>talk to you later</dd>
+      </dl>
+
+      <p>
+        Three hundred pages of boring, useless text.
+        <mark>The one thing</mark> you need to know and will never be able to find again if you
+        don't <mark>highlight</mark> it…
+      </p>
+    </section>
+
+    <h3 id="tables">
+      <a href="#tables">Tables</a>
+    </h3>
+    <table>
+      <caption>
+        Table Caption
+      </caption>
+      <thead>
+        <tr>
+          <th>Table Heading 1</th>
+          <th>Table Heading 2</th>
+          <th>Table Heading 3</th>
+          <th>Table Heading 4</th>
+          <th>Table Heading 5</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Table Footer 1</th>
+          <th>Table Footer 2</th>
+          <th>Table Footer 3</th>
+          <th>Table Footer 4</th>
+          <th>Table Footer 5</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Table Cell 1</td>
+          <td>Table Cell 2</td>
+          <td>Table Cell 3</td>
+          <td>Table Cell 4</td>
+          <td>Table Cell 5</td>
+        </tr>
+        <tr>
+          <td>Table Cell 1</td>
+          <td>Table Cell 2</td>
+          <td>Table Cell 3</td>
+          <td>Table Cell 4</td>
+          <td>Table Cell 5</td>
+        </tr>
+        <tr>
+          <td>Table Cell 1</td>
+          <td>Table Cell 2</td>
+          <td>Table Cell 3</td>
+          <td>Table Cell 4</td>
+          <td>Table Cell 5</td>
+        </tr>
+        <tr>
+          <td>Table Cell 1</td>
+          <td>Table Cell 2</td>
+          <td>Table Cell 3</td>
+          <td>Table Cell 4</td>
+          <td>Table Cell 5</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 id="tabs">
+      <a href="#tabs">Tabs</a>
+    </h3>
+    <div>
+      <nav class="tabs">
+        <a>Tab 1</a>
+        <a>Tab 2</a>
+        <a class="active">Tab 3</a>
+      </nav>
+    </div>
+
+    <h3 id="card">
+      <a href="#card">Card</a>
+    </h3>
+    <div class="card">
+      <header>
+        <h4>Card title</h4>
+      </header>
+      <p>This is the card content</p>
+      <footer class="is-right">
+        <button class="primary">Submit</button>
+        <button>Cancel</button>
+      </footer>
+    </div>
+
+    <!-- <section>
+      <h3>Menu</h3>
+      <menu type="toolbar">
+        <li class="new">New</li>
+        <li class="open">Open</li>
+        <li class="save">Save</li>
+        <li class="quit">Quit</li>
+      </menu>
+    </section> -->
+
+    <h3>Details</h3>
+    <details>
+      <summary>Expand this</summary>
+      <p>Something small enough to escape casual notice.</p>
+    </details>
+
+    <h3>Dialog</h3>
+    <!-- Simple modal dialog containing a form -->
+    <dialog id="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
+      <form method="dialog">
+        <label id="dialogTitle">
+          Favorite animal
+          <select>
+            <option value="default">Choose…</option>
+            <option>Brine shrimp</option>
+            <option>Red panda</option>
+            <option>Spider monkey</option>
+          </select>
+        </label>
+        <p></p>
+        <div>
+          <button value="cancel">Cancel</button>
+          <button class="primary" value="confirm">Confirm</button>
+        </div>
+      </form>
+    </dialog>
+    <p>
+      <button onclick="document.getElementById('dialog').showModal()">Show</button>
+    </p>
+
+    <h3>Progress</h3>
+    <p>
+      <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+    </p>
+    <p><progress>progress</progress></p>
+    <p><progress value="75" max="100">75 %</progress></p>
+  </body>
+</html>
