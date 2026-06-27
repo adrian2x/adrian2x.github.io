@@ -1,7 +1,8 @@
 {
-  "name": "astro-paper-v6",
+  "name": "adrian2x-blog",
   "type": "module",
-  "version": "6.1.0",
+  "version": "1.0.0",
+  "packageManager": "pnpm@11.7.0",
   "engines": {
     "node": ">=22.12.0"
   },

@@ -13,12 +13,12 @@ frontmatter:
 ---
 title: My post title
 author: Adrian Cruz
-pubDatetime: 2026-06-27T17:00:00Z   # any date; see below
+pubDatetime: 2026-06-27T17:00:00Z # any date; see below
 description: One-line summary shown in listings and SEO.
 tags:
   - investing
-draft: false       # true = excluded from the build
-featured: false    # true = pinned on the homepage
+draft: false # true = excluded from the build
+featured: false # true = pinned on the homepage
 ---
 ```
 
