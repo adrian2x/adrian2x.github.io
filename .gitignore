@@ -31,3 +31,6 @@ public/pagefind
 
 # docker compose
 compose.override.yaml
+
+# serena tooling (local agent cache/memories)
+.serena/

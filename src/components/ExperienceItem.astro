@@ -1,0 +1,20 @@
+---
+interface Props {
+  role: string;
+  org: string;
+  dates: string;
+}
+
+const { role, org, dates } = Astro.props;
+---
+
+<div
+  class="border-border mt-8 border-t pt-6 first:mt-6 first:border-t-0 first:pt-0"
+>
+  <h3 class="mt-0 mb-1 text-xl font-semibold">
+    {role}
+    <span class="text-muted-foreground font-normal">· {org}</span>
+  </h3>
+  <p class="text-muted-foreground mt-0 mb-0 text-sm">{dates}</p>
+  <slot />
+</div>
