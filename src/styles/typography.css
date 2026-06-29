@@ -5,12 +5,22 @@
   .app-prose {
     @apply prose;
 
+    /* Readable long-form body copy: Inter at a comfortable size/measure.
+       Chrome, headings and code stay monospace (see below) for the site's look. */
+    font-family: var(--font-body);
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-wrap: pretty;
+
     h1,
     h2,
     h3,
     h4,
     th {
       @apply text-foreground mb-3;
+      font-family: var(--font-app);
+      text-wrap: balance;
     }
 
     h3 {
@@ -72,6 +82,7 @@
 
     code {
       @apply bg-muted/75 text-foreground rounded p-1 wrap-break-word before:content-none after:content-none;
+      font-family: var(--font-app);
     }
 
     .astro-code code {

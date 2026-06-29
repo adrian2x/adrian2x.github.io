@@ -8,27 +8,29 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --font-app: var(--font-google-sans-code);
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
 }
 
-/* Light theme values */
+/* Light theme values - cool, crisp "daylight" sci-fi */
 :root,
 [data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+  --background: #f6f8fc;
+  --foreground: #1a2230;
+  --accent: #2563eb;
   --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
-  --muted-foreground: #6b7280;
-  --border: #ece9e9;
+  --muted: #e7edf6;
+  --muted-foreground: #5a6677;
+  --border: #d6deea;
 }
 
-/* Dark theme values */
+/* Dark theme values - dark slate + electric blue (primary look) */
 [data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
-  --muted: #343f60;
-  --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --background: #0e1217;
+  --foreground: #d4dae3;
+  --accent: #4d8dff;
+  --accent-foreground: #06101f;
+  --muted: #1a212b;
+  --muted-foreground: #7e8b9d;
+  --border: #232c38;
 }

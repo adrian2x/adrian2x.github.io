@@ -68,6 +68,34 @@ export default defineConfig({
       styles: ["normal", "italic"],
       formats: ["woff", "ttf"],
     },
+    {
+      // Readable body copy for long-form article text (chrome/headings stay mono).
+      name: "Inter",
+      cssVariable: "--font-inter",
+      provider: fontProviders.google(),
+      fallbacks: [
+        "system-ui",
+        "-apple-system",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica Neue",
+        "Arial",
+        "sans-serif",
+      ],
+      weights: [400, 500, 600, 700],
+      styles: ["normal", "italic"],
+      formats: ["woff2", "woff"],
+    },
+    {
+      // Futuristic display face for titles/headings; pairs with the Inter body.
+      name: "Space Grotesk",
+      cssVariable: "--font-space-grotesk",
+      provider: fontProviders.google(),
+      fallbacks: ["system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+      weights: [500, 600, 700],
+      styles: ["normal"],
+      formats: ["woff2", "woff"],
+    },
   ],
   env: {
     schema: {

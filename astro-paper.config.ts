@@ -31,8 +31,9 @@ export default defineAstroPaperConfig({
   },
   // TODO: add x / linkedin handles if you want them shown.
   socials: [
-    { name: "github", url: "https://github.com/adrian2x" },
-    { name: "mail",   url: "mailto:kangoonie@gmail.com" },
+    { name: "github",   url: "https://github.com/adrian2x" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/adrian2x" },
+    { name: "mail",     url: "mailto:kangoonie@gmail.com" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
