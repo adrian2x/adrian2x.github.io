@@ -1,0 +1,45 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import LinkButton from "./LinkButton.astro";
+import { obfuscateEmail } from "@/utils/obfuscateEmail";
+
+type Props = {
+  email: string;
+  /** When true (default), the decoded address replaces the link text. Set false
+   * when the link wraps an icon or other content that should be left intact. */
+  fillText?: boolean;
+} & Omit<HTMLAttributes<"a">, "href">;
+
+const { email, fillText = true, ...attrs } = Astro.props;
+const { token, masked } = obfuscateEmail(email);
+---
+
+<LinkButton
+  href="#"
+  rel="nofollow"
+  data-cmail={token}
+  data-cmail-fill={fillText ? "" : undefined}
+  {...attrs}
+>
+  <slot>{masked}</slot>
+</LinkButton>
+
+<script>
+  // Decode obfuscated email links once on load. Astro bundles this script a
+  // single time per page, so one pass handles every MailLink instance.
+  document
+    .querySelectorAll<HTMLAnchorElement>("a[data-cmail]")
+    .forEach(link => {
+      const token = link.dataset.cmail;
+      if (!token) return;
+      try {
+        const email = atob(token.split("").reverse().join(""));
+        link.href = `mailto:${email}`;
+        if (link.dataset.cmailFill !== undefined) link.textContent = email;
+      } catch {
+        // Leave the human-readable masked fallback in place.
+      }
+      delete link.dataset.cmail;
+      delete link.dataset.cmailFill;
+    });
+</script>
